@@ -1,3 +1,5 @@
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Header = () => {
@@ -6,7 +8,8 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg shadow-sm navbar-success bg-light">
         <div className="container">
           <a className="navbar-brand text-success" href="/?home">
-            Navbar
+            <img className="me-2" src="./favicon.ico" width="30px" alt="" />
+            Emma John
           </a>
           <button
             className="navbar-toggler"
@@ -17,13 +20,14 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <FontAwesomeIcon
+              className="navbar-toggler-icon text-success"
+              icon={faBars}
+            />
           </button>
-          <div
-            className="d-flex align-item-center justify-content-center collapse navbar-collapse"
-            id="navbarSupportedContent"
-          >
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a
                   className="nav-link active text-success fw-bold"

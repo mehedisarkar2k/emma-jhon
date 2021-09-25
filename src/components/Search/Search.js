@@ -1,3 +1,5 @@
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Search = () => {
@@ -12,7 +14,8 @@ const Search = () => {
           aria-describedby="search-btn"
         />
         <button className="btn btn-success" type="button" id="search-btn">
-          Button
+          Search
+          <FontAwesomeIcon className="ms-1" icon={faSearch} />
         </button>
       </div>
     </form>
