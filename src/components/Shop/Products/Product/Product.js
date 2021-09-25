@@ -4,6 +4,8 @@ import React from "react";
 
 const Product = (props) => {
   const { name, category, price, img } = props.product;
+  const { clickHandler } = props;
+
   return (
     <div className="col">
       <div className="card p-2 h-100">
@@ -17,9 +19,14 @@ const Product = (props) => {
               <div className="card-text">
                 <h6 className="text-success">Category: {category}</h6>
                 <h6 className="text-success">Price: {price}</h6>
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <small className="text-muted">
+                  <i>Last updated 3 mins ago</i>
+                </small>
 
-                <button className="btn btn-success mt-2">
+                <button
+                  onClick={() => clickHandler(props.product)}
+                  className="btn btn-success mt-2"
+                >
                   <FontAwesomeIcon icon={faShoppingCart} className="me-1" />
                   Add to cart
                 </button>

@@ -3,6 +3,7 @@ import "./Products.css";
 
 const Products = (props) => {
   const products = props.products;
+  const { clickHandler } = props;
 
   return (
     <div
@@ -10,7 +11,11 @@ const Products = (props) => {
       className="row row-cols-1 row-cols-sm-2  row-cols-md-1 row-cols-lg-2 g-4"
     >
       {products.map((product) => (
-        <Product key={product.key} product={product} />
+        <Product
+          key={product.key}
+          clickHandler={clickHandler}
+          product={product}
+        />
       ))}
     </div>
   );
