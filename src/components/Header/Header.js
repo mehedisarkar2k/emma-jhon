@@ -1,4 +1,4 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -46,6 +46,9 @@ const Header = () => {
                 <a className="nav-link text-success" href="/?contact">
                   Contact
                 </a>
+              </li>
+              <li className="nav-item ms-5 text-success fs-4">
+                <FontAwesomeIcon icon={faShoppingCart} />
               </li>
             </ul>
           </div>
